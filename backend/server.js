@@ -1,7 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose")
+const bodyparser = require("body-parser");
 
 const app = express();
+
+const productRoutes = require("./routes/products");
+
+app.use(bodyparser.json());
+
+app.use(productRoutes);
+
 
 const PORT = 8000;
 
