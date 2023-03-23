@@ -1,9 +1,9 @@
-const mongoose = require('model');
+const mongoose = require('mongoose');
 
 const servicesSchema = new mongoose.Schema({
 
-        fname:{
-        type:Sring,
+    fname:{
+        type:String,
         required:true
     },
 
@@ -12,14 +12,14 @@ const servicesSchema = new mongoose.Schema({
         required:true
     },
     email:{
-        type:email,
-        required:true
-    },
-    Servicetype:{
         type:String,
         required:true
     },
-    Discription:{
+    servicetype:{
+        type:String,
+        required:true
+    },
+    discription:{
         type:String,
         required:true
     }
