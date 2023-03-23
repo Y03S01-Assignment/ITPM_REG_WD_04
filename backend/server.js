@@ -1,7 +1,14 @@
 const express = require("express");
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
 
 const app = express();
+
+const innovationRoutes = require('./routes/inovations');
+
+app.use(bodyParser.json());
+
+app.use(innovationRoutes);
 
 const PORT = 8000;
 
