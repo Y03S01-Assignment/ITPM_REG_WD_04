@@ -1,24 +1,29 @@
-const mongoose = require('module');
+const mongoose = require("mongoose");
 
-const postSchema = new mongoose.Schema({
+const innovationSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: true,
+  },
 
-    innovator:{
-        type:Sring,
-        required:true
-    },
+  lastName: {
+    type: String,
+    required: true,
+  },
 
-    description:{
-        type:String,
-        required:true
-    },
-    email:{
-        type:email,
-        required:true
-    },
-    phoneNumber:{
-        type:Number,
-        required:true
-    }
+  description: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type:String,
+    required: true,
+  },
+  phoneNumber: {
+    type: Number,
+    required: true,
+  },
+
 });
 
-module.exports = mongoose.model('Innovatons', postSchema)
+module.exports = mongoose.model("Innovations", innovationSchema);
