@@ -1,24 +1,23 @@
-const mongoose = require('module');
+const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
+  innovator: {
+    type: String,
+    required: true,
+  },
 
-    innovator:{
-        type:Sring,
-        required:true
-    },
-
-    description:{
-        type:String,
-        required:true
-    },
-    email:{
-        type:email,
-        required:true
-    },
-    phoneNumber:{
-        type:Number,
-        required:true
-    }
+  description: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type:String,
+    required: true,
+  },
+  phoneNumber: {
+    type: Number,
+    required: true,
+  },
 });
 
-module.exports = mongoose.model('Innovatons', postSchema)
+module.exports = mongoose.model("Innovatons", postSchema);
