@@ -1,7 +1,12 @@
 const mongoose = require("mongoose");
 
-const postSchema = new mongoose.Schema({
-  innovator: {
+const innovationSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: true,
+  },
+
+  lastName: {
     type: String,
     required: true,
   },
@@ -18,6 +23,7 @@ const postSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+
 });
 
-module.exports = mongoose.model("Innovatons", postSchema);
+module.exports = mongoose.model("Innovations", innovationSchema);
