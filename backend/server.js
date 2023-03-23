@@ -1,11 +1,19 @@
 const express = require("express");
+const mongoose = require("mongoose")
 
 const app = express();
 
-const port = 8000;
+const PORT = 8000;
 
-app.listen(port, () => {
-  console.log(`App is running on ${port}`);
+const DB_URL =
+  "mongodb+srv://yasas:database@itpm.aw6qrpg.mongodb.net/?retryWrites=true&w=majority";
+
+mongoose.connect(DB_URL)
+.then(() => {
+  console.log('DB connected')
+})
+.catch((err) => console.log('DB connection error', err));
+
+app.listen(PORT, () => {
+  console.log(`App is running on ${PORT}`);
 });
-
- 
