@@ -1,0 +1,50 @@
+.App {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  header {
+    margin-bottom: 2rem;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 0 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #0074d9;
+  }
+  
+  main {
+    margin-bottom: 2rem;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    color: #777;
+  }
+  
