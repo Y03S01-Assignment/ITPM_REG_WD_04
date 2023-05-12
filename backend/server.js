@@ -1,7 +1,21 @@
 const express = require("express");
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
+
+const cors = require("cors");
 
 const app = express();
+
+const serviceRoutes = require("./routes/services");
+const productRoutes = require("./routes/products");
+const innovationRoutes = require('./routes/inovations');
+
+app.use(bodyParser.json());
+app.use(cors());
+app.use(serviceRoutes);
+app.use(productRoutes);
+app.use(innovationRoutes);
+
 
 const PORT = 8000;
 
